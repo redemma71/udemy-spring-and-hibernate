@@ -3,13 +3,12 @@ package com.chadcover.springdemo.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import static com.chadcover.springdemo.mvc.UtilityMethods.castToTitleCase;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     @RequestMapping("/showForm")
@@ -23,26 +22,11 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/processFormV2")
-    public String letsShoutDue(HttpServletRequest request, Model model) {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        firstName = firstName.toUpperCase();
-        lastName = lastName.toUpperCase();
-        String fullName = firstName + " " + lastName;
+    public String letsShoutDude(@RequestParam("firstName") String firstName, Model model) {
+        firstName = castToTitleCase(firstName);
         String result = "WASSUP, " + firstName + "!";
-        model.addAttribute("fullName", fullName);
         model.addAttribute("message", result);
-
-        // playing around with an object, instead of a string
-        List<String> sillyNames = new ArrayList<String>();
-        sillyNames.add("Eanie");
-        sillyNames.add("Meanie");
-        sillyNames.add("Minie");
-        sillyNames.add("Larry");
-        sillyNames.add("Curly");
-        sillyNames.add("Moe");
-        Random rando = new Random();
-        model.addAttribute("randomName", sillyNames.get(rando.nextInt(sillyNames.size())));
+        model.addAttribute("firstName", firstName);
         return "helloworld";
     }
 
