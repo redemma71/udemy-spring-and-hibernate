@@ -1,17 +1,14 @@
 package com.chadcover.springdemo.mvc;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-
 public class Person {
     private String firstName;
     private String lastName;
     private String footballTeam;
     // private LinkedHashMap<String, String> footballTeamsMap;
-
     private String favoriteLanguage;
+
+    private String[] operatingSystems;
+
     public Person() {
 //        footballTeamsMap = new LinkedHashMap<>();
 //        footballTeamsMap.put("Ravens", "Baltimore Ravens");
@@ -55,5 +52,13 @@ public class Person {
 
     public void setFavoriteLanguage(String favoriteLanguage) {
         this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public String[] getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
     }
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +10,12 @@
         <h2>Your last name: ${person.lastName}</h2>
         <h2>Your football team: ${person.footballTeam}</h2>
         <h2>Your favorite lanugage: ${person.favoriteLanguage}</h2>
+        <h2>Your operating system(s):</h2>
+        <ul>
+            <c:forEach var="os" items="${person.operatingSystems}">
+                <li>${os}</li>
+            </c:forEach>
+        </ul>
         <p>
             <img src="${pageContext.request.contextPath}/resources/images/vandelay.jpg">
         </p>

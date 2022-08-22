@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static com.chadcover.springdemo.mvc.UtilityMethods.castToTitleCase;
@@ -17,7 +16,7 @@ import static com.chadcover.springdemo.mvc.UtilityMethods.castToTitleCase;
 @RequestMapping("/person")
 public class PersonController {
     @Value("#{footballTeams}")
-    private Map<String, String> footballTeams;
+    private Map<String,String> footballTeams;
 
     @RequestMapping("/showForm")
     public String showForm(Model model) {

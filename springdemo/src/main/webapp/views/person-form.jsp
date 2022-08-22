@@ -22,7 +22,7 @@
 <%--                <form:option value="Cincinnati Bengals" label="Cincinnati Bengals" />--%>
                 <!-- from the hash map in Person -->
 <%--                <form:options items="${person.footballTeamsMap}" />--%>
-                <form:options items="#{footballTeams}" />
+                <form:options items="${footballTeams}" />
             </form:select><br/><br/>
             <!-- radio buttons-->
             Your favorite language:<br/>
@@ -33,7 +33,15 @@
             <form:label path="favoriteLanguage" for="Python">Python</form:label>
             <form:radiobutton path="favoriteLanguage" value="Python"/><br/>
             <form:label path="favoriteLanguage" for="XQuery">XQuery</form:label>
-            <form:radiobutton path="favoriteLanguage" value="XQuery"/><br/>
+            <form:radiobutton path="favoriteLanguage" value="XQuery"/><br/><br/>
+            <!-- checkboxes -->
+            Your operating System:<br/>
+            <form:label path="operatingSystems" for="Linux">Linux</form:label>
+            <form:checkbox path="operatingSystems" value="Linux" /><br />
+            <form:label path="operatingSystems" for="MacOS">MacOS</form:label>
+            <form:checkbox path="operatingSystems" value="MacOS" /><br/>
+            <form:label path="operatingSystems" for="MS Windows">MS Windows</form:label>
+            <form:checkbox path="operatingSystems" value="MS Windows" /><br/><br/>
             <input type="submit">
         </form:form>
     </body>
