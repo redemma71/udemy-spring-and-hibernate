@@ -8,6 +8,7 @@
         <p>
             <ul>
                 <li><a href="person/showForm">Person Form</a></li>
+                <li><a href="customer/showForm">Customer Form</a></li>
             </ul>
         </p>
     </body>

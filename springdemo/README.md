@@ -1,7 +1,7 @@
 # Udemy Spring & Hibernate for Beginners
-## Spring MVC Demo #3
+## Spring MVC Demo #4
 
-This branch contains code that demonstrates topics covered in _Section 14: Spring MVC - Form Tags & Data Binding_. 
+This branch contains code that demonstrates topics covered in _Section 15: Spring MVC - Form Validation - Applying Built-In Validation Rules_. 
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);

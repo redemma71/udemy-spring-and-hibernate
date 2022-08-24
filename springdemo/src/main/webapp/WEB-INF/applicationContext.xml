@@ -30,6 +30,4 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<util:properties id="footballTeams" location="WEB-INF/teams.properties" />
-
 </beans>

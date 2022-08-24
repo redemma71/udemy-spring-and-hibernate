@@ -1,45 +1,44 @@
 package com.chadcover.springdemo.mvc;
 
-import org.springframework.beans.factory.annotation.Value;
+import javax.validation.Valid;
+
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.Map;
-
-import static com.chadcover.springdemo.mvc.UtilityMethods.castToTitleCase;
-
-
 
 @Controller
 @RequestMapping("/person")
 public class PersonController {
-    @Value("#{footballTeams}")
-    private Map<String,String> footballTeams;
+
+    // @InitBinder pre-processes all requests coming in from the web page.
+    // add custom busiiness logic here to handle edge & corner cases,
+    // like leading whitespaces & null/all-whitespace entries
+    @InitBinder
+    public void initBinder(WebDataBinder dataBinder) {
+        StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+        dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+    }
 
     @RequestMapping("/showForm")
     public String showForm(Model model) {
-
-        // TODO: create a new person object
-        Person person = new Person();
-
-        // TODO: add person to the model
-        model.addAttribute("person", person);
-
-        // TODO: add football teams map
-        model.addAttribute("footballTeams", footballTeams);
-
+        model.addAttribute("person", new Person());
         return "person-form";
     }
 
     @RequestMapping("/processForm")
-    public String processForm(@ModelAttribute("person") Person person) {
-        System.out.println("firstName: " + castToTitleCase(person.getFirstName()));
-        System.out.println("lastName: " + castToTitleCase(person.getLastName()));
-        System.out.println("footballTeam: " + person.getFootballTeam());
-        return "person";
+    public String processForm(
+            @Valid @ModelAttribute("person") Person person,
+            BindingResult bindingResult) {
+        System.out.println("firstName: " + person.getFirstName() + " " + person.getLastName());
+        if (bindingResult.hasErrors()) {
+            return "person-form";
+        } else {
+            return "person";
+        }
     }
-
-
 }
