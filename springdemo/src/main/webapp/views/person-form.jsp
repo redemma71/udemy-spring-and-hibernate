@@ -14,15 +14,8 @@
             <form:label path="lastName" cssClass="label">Last Name (*)</form:label>
             <form:input path="lastName" />
             <form:errors path="lastName" cssClass="errors" /><br />
-            <form:label path="age" cssClass="label">Age (*)</form:label>
-            <form:input path="age" />
-            <form:errors path="age" cssClass="errors" /><br />
-            <form:label path="zipCode" cssClass="label">Zip Code (*)</form:label>
-            <form:input path="zipCode" />
-            <form:errors path="zipCode" cssClass="errors" /><br />
-            <form:label path="courseCode" cssClass="label">Course Code (*)</form:label>
-            <form:input path="courseCode" />
-            <form:errors path="courseCode" cssClass="errors" /><br />
+            <form:label path="email" cssClass="label">Email</form:label>
+            <form:input path="email" />
             <input type="submit" value="Submit">
         </form:form>
     </body>

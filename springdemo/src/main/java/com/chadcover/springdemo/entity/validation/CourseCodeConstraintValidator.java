@@ -1,4 +1,4 @@
-package com.chadcover.springdemo.mvc.validation;
+package com.chadcover.springdemo.entity.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

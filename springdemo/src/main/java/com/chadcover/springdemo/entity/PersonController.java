@@ -1,4 +1,4 @@
-package com.chadcover.springdemo.mvc;
+package com.chadcover.springdemo.entity;
 
 import javax.validation.Valid;
 

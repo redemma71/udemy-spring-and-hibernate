@@ -8,9 +8,7 @@
     <body>
         <h2>Your first name: ${person.firstName}</h2>
         <h2>Your last name: ${person.lastName}</h2>
-        <h2>Your age: ${person.age}</h2>
-        <h2>Your Zip Code: ${person.zipCode}</h2>
-        <h2>Your Course Code: ${person.courseCode}</h2>
+        <h2>Your email: ${person.email}</h2>
         <p>
             <img src="${pageContext.request.contextPath}/resources/images/vandelay.jpg">
         </p>

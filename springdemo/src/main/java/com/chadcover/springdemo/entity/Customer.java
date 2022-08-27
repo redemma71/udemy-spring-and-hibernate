@@ -1,4 +1,4 @@
-package com.chadcover.springdemo.mvc;
+package com.chadcover.springdemo.entity;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

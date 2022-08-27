@@ -1,7 +1,8 @@
 # Udemy Spring & Hibernate for Beginners
-## Spring MVC Demo #5
+## Spring Demo #5
+### Hibernate Demo #1: Configuration & CRUD
 
-This branch contains code that demonstrates topics covered in _Section 16: Spring MVC - Validating Number Ranges & Regular Expressions_ & _Section 17. Spring MVC - Creating Custom Validations_. 
+This branch contains code that demonstrates topics covered in _Section 18_ - _Section 21 - Hibernate CRUD Features_. 
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);
