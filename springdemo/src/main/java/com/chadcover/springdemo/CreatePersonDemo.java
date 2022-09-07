@@ -22,13 +22,14 @@ public class CreatePersonDemo {
             // use session object to save a java object
             // 1. create a person object
             System.out.println("Creating a new Person object");
-            Person art = new Person("Arthur", "Vandelay", "art@architects-rock.com");
-            Person george = new Person("George", "Costanza", "george@bosco.com");
-            Person jerry = new Person("Jerry", "Seinfeld", "jerry@pirate.com");
-            Person cosmo = new Person("Cosmo", "Kramer", "cosmo@kramer.com");
-            Person tommy = new Person("Tommy", "Kramer", "tommy@minnesotavikiings.com");
-            Person elaine = new Person("Elaine", "Benis", "elaine@bosco.com");
-            Person[] people = {elaine};
+//            Person art = new Person("Arthur", "Vandelay", "art@architects-rock.com");
+//            Person george = new Person("George", "Costanza", "george@bosco.com");
+//            Person jerry = new Person("Jerry", "Seinfeld", "jerry@pirate.com");
+//            Person cosmo = new Person("Cosmo", "Kramer", "cosmo@kramer.com");
+//            Person tommy = new Person("Tommy", "Kramer", "tommy@minnesotavikiings.com");
+//            Person elaine = new Person("Elaine", "Benis", "elaine@bosco.com");
+//            Person spacey = new Person("Kevin", "Spacey", "kevin@handsy.com");
+//            Person[] people = {spacey};
 
             // 2. start a transaction
             session.beginTransaction();
@@ -36,9 +37,9 @@ public class CreatePersonDemo {
             // 3. save the person object
             System.out.println("Saving the Person object");
             // session.save(art);
-            for (Person person: people) {
-                session.save(person);
-            }
+//            for (Person person: people) {
+//                session.save(person);
+//            }
 
             // 4. commit object
             session.getTransaction().commit();

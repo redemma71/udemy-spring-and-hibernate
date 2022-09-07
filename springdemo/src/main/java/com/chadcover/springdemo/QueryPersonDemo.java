@@ -22,13 +22,13 @@ public class QueryPersonDemo {
         try {
             session.beginTransaction();
             System.out.println("Getting all persons");
-//            List<Person> people = session.createQuery("From Person").getResultList();
+            List<Person> people = session.createQuery("From Person").getResultList();
 //            List<Person> people = session
 //                                    .createQuery("FROM Person AS p WHERE p.lastName='Kramer'" +
 //                                            "OR p.firstName='Jerry'")
 //                                    .getResultList();
-            List<Person> people = session.createQuery("FROM Person as p WHERE p.email LIKE '%bosco.com'")
-                                                .getResultList();
+//            List<Person> people = session.createQuery("FROM Person as p WHERE p.email LIKE '%bosco.com'")
+//                                                .getResultList();
 
             for (Person person: people) {
                 System.out.println(person.getId() + ": " + person.getFirstName() + " " +

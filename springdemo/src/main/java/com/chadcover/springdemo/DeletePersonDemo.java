@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class UpdatePersonDemo {
+public class DeletePersonDemo {
 
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
@@ -18,16 +18,12 @@ public class UpdatePersonDemo {
         // create Session
         Session session = factory.getCurrentSession();
 
-        // get a person
         try {
             session.beginTransaction();
-            System.out.println("Updating a person");
-            int personId = 1;
-            Person george = session.get(Person.class, personId);
-            // george.setDateOfBirth(DateUtils.parseDate("09/23/1959"));
-            // update is not persisted until you apply commit()
+            System.out.println("Deleting a person");
+           session.createQuery("DELETE FROM Person where id=8")
+                           .executeUpdate();
             session.getTransaction().commit();
-            System.out.println(george.toString());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

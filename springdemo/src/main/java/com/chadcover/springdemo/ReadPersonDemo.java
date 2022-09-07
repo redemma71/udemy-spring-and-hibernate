@@ -20,8 +20,8 @@ public class ReadPersonDemo {
         try {
             session.beginTransaction();
             System.out.println("Getting a person");
-            Person george = session.get(Person.class, 2);
-            System.out.println("The person is: " + george.getFirstName() + " " + george.getLastName());
+            Person arthur = session.get(Person.class, 1);
+            System.out.println("The person is: " + arthur.getFirstName() + " " + arthur.getLastName() + ", and his birthday is: " + arthur.getDateOfBirth());
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
