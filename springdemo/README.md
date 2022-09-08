@@ -2,7 +2,7 @@
 ## Spring Demo #5
 ### Hibernate Demo #1: Configuration & CRUD
 
-This branch contains code that demonstrates topics covered in _Section 18_ - _Section 21 - Hibernate CRUD Features_. 
+This branch contains code that demonstrates topics covered in _Section 22_ - _Section 27 - Advanced Mappings in Hibernate_. 
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);
