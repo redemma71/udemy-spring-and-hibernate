@@ -2,7 +2,8 @@
 ## Spring Demo #5
 ### Hibernate Demo #1: Configuration & CRUD
 
-This branch contains code that demonstrates topics covered in _Section 22_ - _Section 27 - Advanced Mappings in Hibernate_. 
+This branch contains code that demonstrates topics covered in _Section 22_ - _Section 26 - Advanced Mappings in Hibernate_. 
+Section 27, Many-to-Many mappings was skipped.
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);

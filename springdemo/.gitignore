@@ -34,4 +34,5 @@ build/
 
 ### VS Code ###
 .vscode/
-../scripts
+scripts
+springdemo.iml
