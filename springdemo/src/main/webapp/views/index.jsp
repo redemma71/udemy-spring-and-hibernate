@@ -5,11 +5,6 @@
     </head>
     <body>
         <h2>Spring MVC Demo Home Page</h2>
-        <p>
-            <ul>
-                <li><a href="person/showForm">Person Form</a></li>
-                <li><a href="customer/showForm">Customer Form</a></li>
-            </ul>
-        </p>
+
     </body>
 </html>
