@@ -15,7 +15,7 @@
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Add support for component scanning -->
-	<context:component-scan base-package="com.chadcover.springdemo" />
+	<context:component-scan base-package="com.chadcover.springdemo,com.chadcover.springdemo.dao" />
 
 	<!-- Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
@@ -26,7 +26,6 @@
 		<property name="prefix" value="/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
 
 	<!-- Step 1: Define Database DataSource / connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -54,7 +53,7 @@
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
-	</bean>	  
+	</bean>
 
 	<!-- Step 3: Setup Hibernate transaction manager -->
 	<bean id="myTransactionManager"
