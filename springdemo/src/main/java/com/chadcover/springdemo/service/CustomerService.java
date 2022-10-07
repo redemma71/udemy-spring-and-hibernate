@@ -5,7 +5,9 @@ import com.chadcover.springdemo.entity.Customer;
 import java.util.List;
 
 public interface CustomerService {
+    public void deleteCustomer(int id);
     public Customer getCustomer(int id);
     public List<Customer> getCustomers();
     public void saveCustomer(Customer customer);
+    public List<Customer> searchCustomers(String searchName);
 }
