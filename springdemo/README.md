@@ -1,8 +1,8 @@
 # Udemy Spring & Hibernate for Beginners
-## Spring Demo #6
-### Build a Database WebApp
+## Spring Demo #7
+### AOP: Aspect Oriented Programming
 
-This branch contains code that demonstrates topics covered in _Section 28_ - _Section 33: Build a Database Webapp
+This branch contains code that demonstrates topics covered in _Section 34_ - _Section X: AOP: Aspect Oriented Programming
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);
