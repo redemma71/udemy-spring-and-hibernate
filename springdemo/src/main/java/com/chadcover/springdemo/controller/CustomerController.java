@@ -3,6 +3,7 @@ package com.chadcover.springdemo.controller;
 import java.util.List;
 
 import com.chadcover.springdemo.service.CustomerService;
+import com.chadcover.springdemo.utils.SortUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,9 +19,17 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping("/list")
-    public String listCustomers(Model model) {
-        // get customers from the service
-        List<Customer> customers = customerService.getCustomers();
+    public String listCustomers(Model model, @RequestParam(required=false) String sort) {
+
+        List<Customer> customers = null;
+        if (sort != null) {
+            int theSortField = Integer.parseInt(sort);
+            // get customers from the service
+            customers = customerService.getCustomers(theSortField);
+        } else {
+            // get customers from the service
+            customers = customerService.getCustomers(SortUtils.LAST_NAME);
+        }
 
         // add customers to model
         model.addAttribute("customers", customers);
