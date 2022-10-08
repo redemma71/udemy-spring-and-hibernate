@@ -1,9 +1,8 @@
 # Udemy Spring & Hibernate for Beginners
-## Spring Demo #5
-### Hibernate Demo #1: Configuration & CRUD
+## Spring Demo #6
+### Build a Database WebApp
 
-This branch contains code that demonstrates topics covered in _Section 22_ - _Section 26 - Advanced Mappings in Hibernate_. 
-Section 27, Many-to-Many mappings was skipped.
+This branch contains code that demonstrates topics covered in _Section 28_ - _Section 33: Build a Database Webapp
 
 ### NOTES
 1. This project was created in [Spring Initializr](https://start.spring.io);
